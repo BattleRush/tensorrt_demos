@@ -5,25 +5,25 @@ layer
    type: "Input"
    top:  "data"
    #
-   # Max allowed input image size as: 1280x720
+   # Max allowed input image size as: 2520x1080
    # 'minsize' = 40
    #
    # Input dimension of the 1st 'scale':
-   #    720 * 12 / 40 = 216
-   #   1280 * 12 / 40 = 384
+   #   1080 * 12 / 40 = 324
+   #   2520 * 12 / 40 = 756
    #
    # H's in all scales: (scale factor = 0.709)
-   #   Original: 216.0, 153.1, 108.6 77.0, 54.6, 38.7, 27.4, 19.5, 13.8, (9.8)
-   #   Rounded:  216, 154, 108,  78,  54,  38,  28,  20,  14
-   #   Offsets:    0, 216, 370, 478, 556, 610, 648, 676, 696, (710)
+   #   Original: 324, 229.7, 162.8 115.4, 81.8, 58.0, 41.1, 29.1, 20.6, (14.6)
+   #   Rounded:  324, 230, 162,  116,  82,  58,  42,  30,  20
+   #   Offsets:    0, 324, 554, 716, 832, 914, 972, 1014, 1044, (1064)
    #
-   # Input dimension of the 'stacked image': 724x384
+   # Input dimension of the 'stacked image': 1064x756
    #
    # Output dimension: (stride=2)
-   #   (710 - 12) / 2 + 1 = 350
-   #   (384 - 12) / 2 + 1 = 187
+   #   (1064 - 12) / 2 + 1 = 527
+   #   (756 - 12) / 2 + 1 = 373
    #
-   input_param{shape:{dim:1 dim:3 dim:710 dim:384}}
+   input_param{shape:{dim:1 dim:3 dim:1064 dim:756}}
 }
 
 layer {
